@@ -1,0 +1,84 @@
+{
+    "questions": [
+        {
+            "questionText": "Cos'è la Sindroma da Spopolamento degli Alveari (SSA)?",
+            "options": [
+                "Indica la tendenza delle api a migrare verso zone più calde durante l'inverno per far ritorno all'alveare durante i periodi più caldi.",
+                "Si tratta di una sindrome misteriosa caratterizzata da un basso numero di api adulte nell'arnia senza segni evidenti di malattie o parassiti.",
+                "E' un evento che si verifica quando le api non riescono a trovare cibo nelle immediate vicinanze dell'arnia.",
+                "Consiste nello svuotamento delle arnie a causa della presenza di predatori."
+            ],
+            "correctAnswerIndex": 1
+        },
+        {
+            "questionText": "Quali sono alcune delle misure di protezione adottate nelle aree urbane per migliorare il benessere delle api e conservare le popolazioni?",
+            "options": [
+                "Le misure di sicurezza nelle aree urbane includono la costruzione di arnie, l'aggiunta di piante gradite alle api e la creazione di tetti verdi.",
+                "La principale misura di sicurezza consiste nell'eliminare completamente le piante fiorite dagli spazi troppo trafficati per evitare che le api vengano attirate in zone pericolose.",
+                "La principale misura di sicurezza per le api nelle aree urbane è l'implementazione di 'zone sicure per le api', che sono aree con muri speciali per contenere le api al loro interno.",
+                "Per garantire la sicurezza delle api, è essenziale utilizzare pesticidi specifici per ridurre la presenza di altre specie di insetti nelle vicinanze delle arnie. Ciò riduce la competizione per il cibo e protegge le risorse alimentari delle api, garantendo un ambiente sicuro."
+            ],
+            "correctAnswerIndex": 0
+        },
+        {
+            "questionText": "In che modo l'eutrofizzazione danneggia gli ecosistemi acquatici?",
+            "options": [
+                "L'eutrofizzazione favorisce la diversità biologica negli ecosistemi acquatici, aumentando la disponibilità di nutrienti per gli organismi.",
+                "L'eutrofizzazione non ha alcun impatto sugli ecosistemi acquatici perché le alghe e le piante acquatiche sono una parte naturale di questi ecosistemi.",
+                "L'eutrofizzazione può migliorare la qualità dell'acqua negli ecosistemi acquatici promuovendo la crescita di piante benefiche e migliorando l'habitat per i pesci.",
+                "L'eutrofizzazione danneggia gli ecosistemi acquatici riducendo l'ossigeno nell'acqua a causa della crescita eccessiva di alghe e piante acquatiche. Quando queste piante muoiono e si decompongono, consumano ossigeno, causando l'ipossia."
+            ],
+            "correctAnswerIndex": 3
+        },
+        {
+            "questionText": "Come contribuiscono le lavanderie industriali all'inquinamento?",
+            "options": [
+                "Le lavanderie industriali non contribuiscono all'inquinamento perché seguono rigorose normative ambientali e trattano le acque reflue prima di scaricarle.",
+                "Le lavanderie industriali contribuiscono all'inquinamento a causa del consumo eccessivo di energia. Sono responsabili del 4 percento delle emissioni totali di CO2.",
+                "Le lavanderie industriali contribuiscono all'inquinamento mediante lo scarico di grandi quantità di acque reflue contenenti contaminanti organici e inorganici, tra cui oli minerali e detergenti.",
+                "Le lavanderie industriali contribuiscono all'inquinamento mediante lo scarico di grandi quantità di acque reflue. Tuttavia, le acque reflue vengono adeguatamente trattate per ridurre l'eventuale impatto ambientale."
+            ],
+            "correctAnswerIndex": 2
+        },
+        {
+            "questionText": "Quali sono gli effetti dei detersivi nel suolo e come possono influenzare la crescita delle piante e la qualità del terreno?",
+            "options": [
+                "I detersivi nel terreno possono influenzare la crescita delle piante e la qualità del suolo a causa dell'aumento della salinità e della ridotta capacità di trattenere acqua.",
+                "I detersivi nel suolo possono compromettere la crescita delle piante e la qualità del suolo a causa dell'aumento del potassio. Ciò comporta una difficoltà nell'assorbimento dei nutrienti da parte delle piante.",
+                "I detersivi nel terreno agiscono come fertilizzanti naturali, aumentando l'apporto di sodio e potassio. Ciò promuove la crescita di alcune piante a scapito di altre, producendo una diminuzione della biodiversità.",
+                "I detersivi nel terreno non hanno alcun impatto sull'ambiente circostante, poiché vengono rapidamente assorbiti senza causare danni al suolo o alle piante."
+            ],
+            "correctAnswerIndex": 0
+        },
+        {
+            "questionText": "Qual è il tasso globale di consumo di bottiglie di plastica al minuto e quale categoria di bevande contribuisce in modo significativo a questa cifra?",
+            "options": [
+                "A livello globale, vengono acquistate un miliardo di bottiglie di plastica al minuto, con una parte significativa dedicata all'acqua.",
+                "A livello globale, vengono acquistate mille bottiglie di plastica al minuto, con una parte significativa dedicata alle bibite.",
+                "A livello globale, vengono acquistate centomila bottiglie di plastica al minuto, con una parte significativa dedicata ai succhi di frutta.",
+                "A livello globale, vengono acquistate un milione di bottiglie di plastica al minuto, con una parte significativa dedicata all'acqua."
+            ],
+            "correctAnswerIndex": 3
+        },
+        {
+            "questionText": "Come entrano i contaminanti di plastica negli ecosistemi acquatici e qual è la composizione principale dell'inquinamento da plastica trovato negli oceani?",
+            "options": [
+                "I contaminanti di plastica entrano negli ecosistemi acquatici attraverso varie fonti, tra cui impianti di trattamento delle acque reflue, il trasporto marittimo, attività di pesca, persone che gettano rifiuti di carta respinti e ruscelli urbani. La composizione principale dell'inquinamento da plastica trovato negli oceani è costituita da microplastiche, ossia particelle grandi tra 1 e 5 cm di diametro.",
+                "I contaminanti di plastica entrano negli ecosistemi acquatici attraverso varie fonti, tra cui impianti di trattamento delle acque reflue, navi cargo, attività di pesca, rifiuti umani dalle aree costiere e scolo urbano. La composizione principale dell'inquinamento da plastica trovato negli oceani è costituita da microplastiche, particelle più piccole di 1 cm di diametro.",
+                "I contaminanti di plastica entrano negli ecosistemi acquatici attraverso le correnti oceaniche. La composizione principale dell'inquinamento da plastica trovato negli oceani è costituita da macroplastiche, particelle più grandi di 1 metro di diametro.",
+                "I contaminanti di plastica entrano negli ecosistemi acquatici attraverso le correnti oceaniche. La composizione principale dell'inquinamento da plastica trovato negli oceani è l'ectoplastica, particelle più piccole di 1 cm di diametro."
+            ],
+            "correctAnswerIndex": 1
+        },
+        {
+            "questionText": "Quali sono alcuni degli effetti dannosi dell'inquinamento da plastica sulla biodiversità negli ecosistemi acquatici?",
+            "options": [
+                "L'inquinamento da plastica negli ecosistemi acquatici non ha alcun impatto sulla biodiversità.",
+                "Gli effetti dannosi dell'inquinamento da plastica sulla biodiversità negli ecosistemi acquatici includono l'esposizione degli animali ai detriti di plastica, la loro sottoposizione a processi chimici e biologici nocivi e l'impigliamento di alcune in detriti di plastica di dimensioni maggiori.",
+                "Gli effetti dannosi dell'inquinamento da plastica sulla biodiversità negli ecosistemi acquatici includono l'esposizione degli animali ai detriti di plastica, la loro sottoposizione a processi chimici e biologici dannosi, l'impigliamento di alcune specie in detriti di plastica di dimensioni maggiori e la possibile malnutrizione quando la plastica viene ingerita al posto del cibo.",
+                "L'inquinamento da plastica negli ecosistemi acquatici porta a un aumento della biodiversità, facilitando la diffusione di nuove specie."
+            ],
+            "correctAnswerIndex": 2
+        }
+    ]
+}

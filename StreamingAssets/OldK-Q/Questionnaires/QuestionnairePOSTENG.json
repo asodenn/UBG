@@ -1,0 +1,86 @@
+{
+    "questions":[
+        {
+      "questionText": "What is Colony Collapse Disorder (CCD)?",
+      "options": [
+        "It indicates the tendency of bees to migrate to warmer areas during winter to return to the hive during warmer periods.",
+        "It is a mysterious syndrome characterized by low numbers of adult bees in the hive with no obvious signs of disease or parasites.",
+        "This is an event that occurs when bees cannot find food in the immediate vicinity of the hive.",
+        "It consists of the emptying of hives due to the presence of predators."
+      ],
+      "correctAnswerIndex": 1
+  },
+        {
+          "questionText": "What are some of the protective measures taken in urban areas to improve bee welfare and conserve populations?",
+          "options": [
+            "Safety measures in urban areas include building beehives, adding bee-pleasing plants and creating green roofs.",
+            "The main safety measure is to completely remove flowering plants from over-trafficked spaces to prevent bees from being attracted to dangerous areas.",
+            "The main safety measure for bees in urban areas is the implementation of 'bee safe zones,' which are areas with special walls to contain bees within them.",
+            "To ensure the safety of bees, it is essential to use specific pesticides to reduce the amount of other insect species in the vicinity of hives. This reduces competition for food and protects the bees' food resources, ensuring their safe environment."
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "questionText": "How does eutrophication damage aquatic ecosystems?",
+          "options": [
+            "Eutrophication promotes biological diversity in aquatic ecosystems by increasing the availability of nutrients to organisms.",
+            "Eutrophication has no impact on aquatic ecosystems because algae and aquatic plants are a natural part of these ecosystems.",
+            "Eutrophication can improve water quality in aquatic ecosystems by promoting the growth of beneficial plants and improving habitat for fish.",
+            "Eutrophication damages aquatic ecosystems by reducing oxygen in the water due to the overgrowth of algae and aquatic plants. As these plants die and decompose, they consume oxygen, causing hypoxia."
+          ],
+          "correctAnswerIndex": 3
+        },
+        {
+          "questionText": "How do industrial laundries contribute to pollution?",
+          "options": [
+            "Industrial laundries do not contribute to pollution because they follow strict environmental regulations and treat their wastewater before discharging it.",
+            "Industrial laundries contribute to pollution through inordinate energy consumption. In fact, they are responsible for 4 percent of total CO2 emissions.",
+            "Industrial laundries contribute to pollution through the discharge of large amounts of wastewater containing organic and inorganic contaminants, including mineral oils and detergents.",
+            "Industrial laundries contribute to pollution through the discharge of large amounts of wastewater. However, wastewater is properly treated to reduce the possible environmental impact."
+          ],
+          "correctAnswerIndex": 2
+        },
+        {
+          "questionText": "What are the effects of detergents in soil and how can they affect plant growth and soil quality?",
+          "options": [
+            "Detergents in soil can affect plant growth and soil quality due to increased salinity and reduced water-holding capacity.",
+            "Detergents in the soil can impair plant growth and soil quality due to increased potassium. This results in difficulty in nutrient uptake by plants.",
+            "Detergents in the soil act as natural fertilizers, increasing the supply of sodium and potassium. This promotes the growth of some plants at the expense of others, producing a decrease in biodiversity.",
+            "Detergents in the soil have no impact on the surrounding environment, as they are quickly absorbed without causing damage to the soil or plants."
+          ],
+          "correctAnswerIndex": 0
+        },
+        {
+          "questionText": "What is the global rate of plastic bottle consumption per minute, and which beverage category contributes significantly to this figure?",
+          "options": [
+            "Globally, one billion plastic bottles are purchased every minute, with a significant portion dedicated to water.",
+            "Globally, one thousand plastic bottles are purchased every minute, with a significant portion dedicated to soft drinks.",
+            "Globally, one hundred thousand plastic bottles are purchased every minute, with a significant portion dedicated to juices.",
+            "Globally, one million plastic bottles are purchased every minute, with a significant portion dedicated to water."
+          ],
+          "correctAnswerIndex": 3
+        },
+        {
+          "questionText": "How do plastic contaminants enter aquatic ecosystems, and what is the primary composition of plastic pollution found in oceans?",
+          "options": [
+            "Plastic contaminants enter aquatic ecosystems through various sources, including wastewater treatment plants, cargo shipping, fishing activities, people throwing rejected papers, and urban runoff. The primary composition of plastic pollution found in oceans is microplastics, particles bigger than 1 cm in diameter, and less than 5 cm.",
+            "Plastic contaminants enter aquatic ecosystems through various sources, including wastewater treatment plants, cargo shipping, fishing activities, human waste from coastal areas, and urban runoff. The primary composition of plastic pollution found in oceans is microplastics, particles smaller than 1 cm in diameter.",
+            "Plastic contaminants enter aquatic ecosystems through ocean currents. The primary composition of plastic pollution found in oceans is macroplastics, particles bigger than 1 m in diameter.",
+            "Plastic contaminants enter aquatic ecosystems through ocean currents. The primary composition of plastic pollution found in oceans is ectoplastic, particles smaller than 1 cm in diameter."
+          ],
+          "correctAnswerIndex": 1
+        },
+        {
+          "questionText": "What are some of the detrimental effects of plastic pollution on biodiversity in aquatic ecosystems?",
+          "options": [
+            "Plastic pollution in aquatic ecosystems has no impact on biodiversity.",
+            "Detrimental effects of plastic pollution on biodiversity in aquatic ecosystems include animals being exposed to plastic debris, undergoing harmful chemical and biological processes, and entanglement of species in larger plastic debris.",
+            "Detrimental effects of plastic pollution on biodiversity in aquatic ecosystems include animals being exposed to plastic debris, undergoing harmful chemical and biological processes, entanglement of species in larger plastic debris, and potential malnutrition when plastic is ingested instead of food.",
+            "Plastic pollution in aquatic ecosystems leads to increased biodiversity, by facilitating the spread of new species."
+          ],
+          "correctAnswerIndex": 2
+        }
+
+  ]
+}
+
