@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research Consent Form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    /* ── CONFIG ─────────────────────────────────────── */
+    :root {
+      --bg:       #0d0f0e;
+      --surface:  #141614;
+      --border:   #2a2e2a;
+      --accent:   #a8f09a;
+      --muted:    #5a6459;
+      --text:     #dde8db;
+      --danger:   #f0857a;
+      --serif:    'DM Serif Display', Georgia, serif;
+      --mono:     'DM Mono', 'Courier New', monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--mono);
+      font-size: 14px;
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 48px 20px 80px;
+    }
+
+    /* ── GRID NOISE BACKGROUND ──────────────────────── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(168,240,154,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(168,240,154,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── WRAPPER ────────────────────────────────────── */
+    .wrapper {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 720px;
+    }
+
+    /* ── HEADER ─────────────────────────────────────── */
+    .header {
+      margin-bottom: 48px;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 4px 10px;
+      margin-bottom: 20px;
+      opacity: 0.8;
+    }
+
+    .badge::before {
+      content: '';
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      animation: pulse 2s ease infinite;
+    }
+
+    h1 {
+      font-family: var(--serif);
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 400;
+      line-height: 1.15;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 13px;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── CARD ───────────────────────────────────────── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 32px;
+      margin-bottom: 20px;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .card:nth-child(2) { animation-delay: 0.1s; }
+    .card:nth-child(3) { animation-delay: 0.2s; }
+    .card:nth-child(4) { animation-delay: 0.3s; }
+
+    .card-label {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+      opacity: 0.7;
+    }
+
+    .card h2 {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+
+    .card p {
+      color: #a0b09e;
+      font-size: 13.5px;
+      line-height: 1.75;
+    }
+
+    .card p + p { margin-top: 10px; }
+
+    /* ── INFO GRID ──────────────────────────────────── */
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 4px;
+    }
+
+    @media (max-width: 520px) {
+      .info-grid { grid-template-columns: 1fr; }
+    }
+
+    .info-item {
+      border: 1px solid var(--border);
+      padding: 14px 16px;
+    }
+
+    .info-item .label {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+
+    .info-item .value {
+      color: var(--text);
+      font-size: 13px;
+    }
+
+    /* ── CHECKLIST ──────────────────────────────────── */
+    .checklist {
+      list-style: none;
+      margin-top: 4px;
+    }
+
+    .checklist li {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 13.5px;
+      color: #a0b09e;
+    }
+
+    .checklist li:last-child { border-bottom: none; }
+
+    .checklist li::before {
+      content: '✓';
+      color: var(--accent);
+      font-size: 12px;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+
+    /* ── CONTACT ────────────────────────────────────── */
+    .contact-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+
+    .contact-pill {
+      border: 1px solid var(--border);
+      padding: 8px 14px;
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .contact-pill strong {
+      color: var(--text);
+      display: block;
+      font-weight: 400;
+      margin-bottom: 2px;
+    }
+
+    /* ── CONSENT BOX ────────────────────────────────── */
+    .consent-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 28px 32px;
+      animation: fadeUp 0.6s ease 0.4s both;
+    }
+
+    .consent-checkbox-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 28px;
+      cursor: pointer;
+    }
+
+    .consent-checkbox-row input[type="checkbox"] {
+      appearance: none;
+      width: 20px; height: 20px;
+      min-width: 20px;
+      border: 1px solid var(--muted);
+      background: transparent;
+      cursor: pointer;
+      margin-top: 2px;
+      position: relative;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .consent-checkbox-row input[type="checkbox"]:checked {
+      border-color: var(--accent);
+      background: var(--accent);
+    }
+
+    .consent-checkbox-row input[type="checkbox"]:checked::after {
+      content: '';
+      position: absolute;
+      left: 5px; top: 2px;
+      width: 8px; height: 12px;
+      border: 2px solid #0d0f0e;
+      border-top: none;
+      border-left: none;
+      transform: rotate(45deg);
+    }
+
+    .consent-checkbox-row label {
+      font-size: 13px;
+      color: #a0b09e;
+      cursor: pointer;
+      line-height: 1.6;
+    }
+
+    /* ── BUTTONS ────────────────────────────────────── */
+    .btn-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      font-family: var(--mono);
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      border: none;
+      transition: opacity 0.2s, transform 0.1s;
+    }
+
+    .btn:active { transform: scale(0.98); }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #0d0f0e;
+      font-weight: 500;
+    }
+
+    .btn-primary:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    .btn-primary:not(:disabled):hover { opacity: 0.88; }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid var(--border);
+    }
+
+    .btn-secondary:hover { color: var(--text); border-color: var(--muted); }
+
+    /* ── STATUS ─────────────────────────────────────── */
+    .status {
+      display: none;
+      margin-top: 16px;
+      padding: 12px 16px;
+      font-size: 12px;
+      border-left: 2px solid var(--accent);
+      color: var(--accent);
+      background: rgba(168,240,154,0.05);
+    }
+
+    .status.error {
+      border-color: var(--danger);
+      color: var(--danger);
+      background: rgba(240,133,122,0.05);
+    }
+
+    .status.visible { display: block; }
+
+    /* ── FOOTER ─────────────────────────────────────── */
+    .footer {
+      margin-top: 48px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      animation: fadeUp 0.6s ease 0.5s both;
+    }
+
+    /* ── DECLINE PAGE ───────────────────────────────── */
+    #decline-view {
+      display: none;
+      text-align: center;
+      padding: 60px 20px;
+      animation: fadeUp 0.5s ease both;
+    }
+
+    #decline-view .big-icon { font-size: 48px; margin-bottom: 24px; }
+
+    #decline-view h2 {
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+
+    #decline-view p { color: var(--muted); font-size: 13px; }
+
+    /* ── DEMO VIEW ──────────────────────────────────── */
+    #demo-view { display: none; animation: fadeUp 0.5s ease both; }
+
+    .demo-progress {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 36px;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .demo-progress .step {
+      width: 28px; height: 3px;
+      background: var(--border);
+    }
+
+    .demo-progress .step.done { background: var(--accent); }
+
+    .field-group {
+      margin-bottom: 24px;
+    }
+
+    .field-label {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      opacity: 0.8;
+      margin-bottom: 10px;
+    }
+
+    .field-required::after {
+      content: ' *';
+      color: var(--danger);
+    }
+
+    .radio-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .radio-grid.single-col { grid-template-columns: 1fr; }
+
+    @media (max-width: 480px) {
+      .radio-grid { grid-template-columns: 1fr; }
+    }
+
+    .radio-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border: 1px solid var(--border);
+      padding: 11px 14px;
+      cursor: pointer;
+      transition: border-color 0.15s, background 0.15s;
+      font-size: 13px;
+      color: #a0b09e;
+      user-select: none;
+    }
+
+    .radio-option:hover {
+      border-color: var(--muted);
+      color: var(--text);
+    }
+
+    .radio-option input[type="radio"] {
+      appearance: none;
+      width: 14px; height: 14px;
+      min-width: 14px;
+      border: 1px solid var(--muted);
+      border-radius: 50%;
+      background: transparent;
+      position: relative;
+      transition: border-color 0.15s;
+      cursor: pointer;
+    }
+
+    .radio-option input[type="radio"]:checked {
+      border-color: var(--accent);
+    }
+
+    .radio-option input[type="radio"]:checked::after {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .radio-option:has(input:checked) {
+      border-color: var(--accent);
+      background: rgba(168,240,154,0.05);
+      color: var(--text);
+    }
+
+    .demo-error {
+      display: none;
+      margin-top: 12px;
+      font-size: 12px;
+      color: var(--danger);
+      padding: 10px 14px;
+      border-left: 2px solid var(--danger);
+      background: rgba(240,133,122,0.05);
+    }
+
+    .demo-error.visible { display: block; }
+
+    /* ── ANIMATIONS ─────────────────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50%       { opacity: 0.3; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="wrapper">
+
+  <!-- ── CONSENT VIEW ── -->
+  <div id="consent-view">
+
+    <header class="header">
+      <div class="badge">Academic Research</div>
+      <h1>Participant <em>Informed</em><br>Consent Form</h1>
+      <p class="subtitle">Please read carefully before proceeding to the study.</p>
+    </header>
+
+    <!-- Study Info -->
+    <div class="card">
+      <div class="card-label">01 — About the Study</div>
+      <h2>Research Purpose</h2>
+      <p>
+        This study is part of a master’s thesis research project that examines how a serious game enhanced with narrative and user experience design affects environmental sustainability awareness and learning experience.
+      </p>
+      
+      <p>
+        You are invited to participate in this study by playing a digital game and completing short questionnaires about your experience. Participation is completely voluntary.
+      </p>
+
+      <p>If you agree to participate, you will:</p>
+
+      <ul style= "padding-left: 20px;">
+        <li>play a browser-based digital game for approximately 25–35 minutes,</li>
+        <li>complete a short questionnaires before and after gameplay</li>
+      </ul>
+      <p></p>
+
+      <p>The total participation time is expected to be approximately 30–40 minutes.</p>
+
+      <p>
+        The study involves minimal risk. Some participants may experience mild fatigue or slight discomfort associated with playing a digital game or completing questionnaires. You may stop participating at any time without providing a reason and without any negative consequences.
+      </p>
+
+      <p>
+        All collected data will be anonymized. The data will be used only for academic and research purposes, including the completion of a master’s thesis and possible scientific publications or presentations. Your identity will not be revealed in any report, publication, or presentation related to this research.
+      </p>
+
+      <p>
+        Your participation in this study is entirely voluntary. You may withdraw from the study at any time without penalty or disadvantage. If you choose to withdraw, any identifiable data related to you will be removed upon request.
+      </p>
+
+      <div class="info-grid" style="margin-top:20px">
+        <div class="info-item">
+          <div class="label">Researcher</div>
+          <!-- ✏️ EDIT -->
+          <div class="value">Aslı Bora</div>
+        </div>
+        <div class="info-item">
+          <div class="label">Institution</div>
+          <!-- ✏️ EDIT -->
+          <div class="value"> University of Trento / Department of Psychology and Cognitive Science</div>
+        </div>
+        <div class="info-item">
+          <div class="label">Estimated Duration</div>
+          <!-- ✏️ EDIT -->
+          <div class="value">~30-40 minutes</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- What's collected -->
+    <div class="card">
+      <div class="card-label">02 — Data Collection</div>
+      <h2>What We Collect</h2>
+      <ul class="checklist">
+        <!-- ✏️ EDIT: list what data you actually collect -->
+        <li>Gameplay interaction data and gameplay completion times</li>
+        <li>Questionnaire responses</li>
+        <li>No personally identifiable information is collected</li>
+        <li>No name, email, or demographic data unless you provide it voluntarily</li>
+        <li>Data is stored securely and used solely for this research</li>
+      </ul>
+    </div>
+
+    <!-- Rights -->
+    <div class="card">
+      <div class="card-label">03 — Your Rights</div>
+      <h2>Participation is Voluntary</h2>
+      <ul class="checklist">
+        <li>Participation is entirely voluntary — you may decline without consequence</li>
+        <li>You may stop at any time by closing the browser window</li>
+        <li>All data is anonymised; you cannot be identified from the results</li>
+        <li>Collected data may be published in academic papers or the thesis</li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="card">
+      <div class="card-label">04 — Contact</div>
+      <h2>Questions?</h2>
+      <p>If you have any questions about this study, please reach out:</p>
+      <div class="contact-row" style="margin-top:16px">
+        <div class="contact-pill">
+          <strong>Researcher</strong>
+          <!-- ✏️ EDIT -->
+          asli.bora@studenti.unitn.it
+        </div>
+        <div class="contact-pill">
+          <strong>Supervisor</strong>
+          <!-- ✏️ EDIT -->
+          fbonetti@fbk.eu
+          <p></p>
+          sbassanelli@fbk.eu
+        </div>
+      </div>
+    </div>
+
+    <!-- Consent + Buttons -->
+    <div class="consent-box">
+      <div class="consent-checkbox-row">
+        <input type="checkbox" id="agree-check" />
+        <label for="agree-check">
+          I have read and understood the information above. I am 18 years of age or older and
+          I voluntarily agree to participate in this research study. I understand that my
+          anonymised data will be used for academic research purposes.
+        </label>
+      </div>
+
+      <div class="btn-row">
+        <button class="btn btn-primary" id="btn-consent" disabled>
+          I Agree — Proceed to Study
+          <span>→</span>
+        </button>
+        <button class="btn btn-secondary" id="btn-decline">
+          I Decline
+        </button>
+      </div>
+
+      <div class="status" id="status-msg"></div>
+    </div>
+
+    <div class="footer">
+      Your participation is anonymous and voluntary &nbsp;·&nbsp;
+      <!-- ✏️ EDIT year / name -->
+      © 2025 Aslı Bora — Universtity of Trento / Human-Computer Interaction
+    </div>
+
+  </div><!-- /consent-view -->
+
+  <!-- ── DECLINE VIEW ── -->
+  <div id="decline-view">
+    <div class="big-icon">🌿</div>
+    <h2>Thank you for your time.</h2>
+    <p>You have chosen not to participate. No data has been recorded.<br>
+       You may close this window.</p>
+  </div>
+
+  <!-- ── DEMOGRAPHIC VIEW ── -->
+  <div id="demo-view">
+    <header class="header">
+      <div class="badge">Step 2 of 2</div>
+      <h1>A Few Quick <em>Questions</em></h1>
+      <p class="subtitle">This helps us understand our participant group. All responses are anonymous.</p>
+    </header>
+
+    <div class="demo-progress">
+      <div class="step done"></div>
+      <div class="step done"></div>
+      <span>Demographic Info</span>
+    </div>
+
+    <div class="card" style="animation-delay:0.05s">
+
+      <!-- Age -->
+      <div class="field-group">
+        <span class="field-label field-required">Age</span>
+        <div class="radio-grid single-col">
+          <label class="radio-option"><input type="radio" name="age" value="18_24"> 18 – 24</label>
+          <label class="radio-option"><input type="radio" name="age" value="25_34"> 25 – 34</label>
+          <label class="radio-option"><input type="radio" name="age" value="35_44"> 35 – 44</label>
+          <label class="radio-option"><input type="radio" name="age" value="45_54"> 45 – 54</label>
+          <label class="radio-option"><input type="radio" name="age" value="55_64"> 55 – 64</label>
+          <label class="radio-option"><input type="radio" name="age" value="65_plus"> 65 or older</label>
+        </div>
+      </div>
+
+      <!-- Gender -->
+      <div class="field-group">
+        <span class="field-label field-required">Gender</span>
+        <div class="radio-grid single-col">
+          <label class="radio-option"><input type="radio" name="gender" value="female"> Female</label>
+          <label class="radio-option"><input type="radio" name="gender" value="male"> Male</label>
+          <label class="radio-option"><input type="radio" name="gender" value="non_binary"> Non-binary</label>
+          <label class="radio-option"><input type="radio" name="gender" value="prefer_not"> Prefer not to say</label>
+        </div>
+      </div>
+
+      <!-- Education -->
+      <div class="field-group">
+        <span class="field-label field-required">Highest Level of Education Completed</span>
+        <div class="radio-grid single-col">
+          <label class="radio-option"><input type="radio" name="education" value="high_school"> High school or equivalent</label>
+          <label class="radio-option"><input type="radio" name="education" value="bachelor"> Bachelor's degree</label>
+          <label class="radio-option"><input type="radio" name="education" value="master"> Master's degree</label>
+          <label class="radio-option"><input type="radio" name="education" value="doctorate"> Doctoral degree</label>
+        </div>
+      </div>
+
+      <!-- Gaming Frequency -->
+      <div class="field-group">
+        <span class="field-label field-required">How Often Do You Play Video / Digital Games?</span>
+        <div class="radio-grid single-col">
+          <label class="radio-option"><input type="radio" name="gaming_freq" value="never"> Never</label>
+          <label class="radio-option"><input type="radio" name="gaming_freq" value="rarely"> Rarely</label>
+          <label class="radio-option"><input type="radio" name="gaming_freq" value="sometimes"> Sometimes</label>
+          <label class="radio-option"><input type="radio" name="gaming_freq" value="regularly"> Regularly</label>
+          <label class="radio-option"><input type="radio" name="gaming_freq" value="frequently"> Frequently</label>
+        </div>
+      </div>
+
+      <div class="demo-error" id="demo-error">Please answer all questions before continuing.</div>
+
+      <div class="btn-row" style="margin-top:28px">
+        <button class="btn btn-primary" id="btn-demo-submit">
+          Continue to Study
+          <span>→</span>
+        </button>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      Your participation is anonymous and voluntary &nbsp;·&nbsp;
+      © 2025 Aslı Bora — University of Trento / Human-Computer Interaction
+    </div>
+  </div><!-- /demo-view -->
+
+</div><!-- /wrapper -->
+
+<script>
+  // ════════════════════════════════════════════════════
+  //  ✏️  CONFIGURE THESE TWO VALUES
+  // ════════════════════════════════════════════════════
+  const SUPABASE_URL = 'https://vnujuzczgxcduihjwltq.supabase.co';
+  const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InZudWp1emN6Z3hjZHVpaGp3bHRxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk3MzcxMTMsImV4cCI6MjA5NTMxMzExM30._O38YJIh669HnU-NkVDs1bLaASaexSywMZP4lbpWQz0';
+  const GAME_URL     = 'https://asodenn.github.io/UBG/game.html';  // ✏️ Unity WebGL deploy URL
+  // ════════════════════════════════════════════════════
+
+  // ── State ────────────────────────────────────────────
+  let sessionId = null; // set after consent is saved
+
+  // ── DOM refs ─────────────────────────────────────────
+  const checkbox   = document.getElementById('agree-check');
+  const btnYes     = document.getElementById('btn-consent');
+  const btnNo      = document.getElementById('btn-decline');
+  const statusEl   = document.getElementById('status-msg');
+  const consentView = document.getElementById('consent-view');
+  const demoView   = document.getElementById('demo-view');
+  const declineView = document.getElementById('decline-view');
+  const btnDemoSubmit = document.getElementById('btn-demo-submit');
+  const demoError  = document.getElementById('demo-error');
+
+  // ── Step 1: Checkbox enables button ──────────────────
+  checkbox.addEventListener('change', () => {
+    btnYes.disabled = !checkbox.checked;
+  });
+
+  // ── Step 1: Consent → save to Supabase → show demo ───
+  btnYes.addEventListener('click', async () => {
+    btnYes.disabled = true;
+    btnYes.textContent = 'Saving…';
+    showStatus('Recording your consent…', false);
+
+    try {
+      const res = await fetch(`${SUPABASE_URL}/rest/v1/consents`, {
+        method: 'POST',
+        headers: {
+          'Content-Type':  'application/json',
+          'apikey':        SUPABASE_KEY,
+          'Authorization': `Bearer ${SUPABASE_KEY}`,
+          'Prefer':        'return=representation',
+        },
+        body: JSON.stringify({
+          consented:    true,
+          consented_at: new Date().toISOString(),
+          user_agent:   navigator.userAgent,
+        }),
+      });
+
+      if (!res.ok) throw new Error((await res.text()) || `HTTP ${res.status}`);
+
+      const [row] = await res.json();
+      sessionId = row.id; // keep UUID for later
+
+      // Transition to demographic form
+      consentView.style.display = 'none';
+      demoView.style.display = 'block';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+    } catch (err) {
+      console.error(err);
+      showStatus(`Could not save consent: ${err.message}. Please try again.`, true);
+      btnYes.disabled = false;
+      btnYes.innerHTML = 'I Agree — Proceed to Study <span>→</span>';
+    }
+  });
+
+  // ── Step 2: Demographic submit → update row → redirect ──
+  btnDemoSubmit.addEventListener('click', async () => {
+    const required = ['age', 'gender', 'education', 'gaming_freq'];
+    const values   = {};
+    let allFilled  = true;
+
+    for (const name of required) {
+      const checked = document.querySelector(`input[name="${name}"]:checked`);
+      if (!checked) { allFilled = false; break; }
+      values[name] = checked.value;
+    }
+
+    if (!allFilled) {
+      demoError.classList.add('visible');
+      demoError.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      return;
+    }
+
+    demoError.classList.remove('visible');
+    btnDemoSubmit.disabled = true;
+    btnDemoSubmit.textContent = 'Saving…';
+
+    try {
+      // PATCH the existing consent row to add demographics
+      const res = await fetch(
+        `${SUPABASE_URL}/rest/v1/consents?id=eq.${sessionId}`,
+        {
+          method: 'PATCH',
+          headers: {
+            'Content-Type':  'application/json',
+            'apikey':        SUPABASE_KEY,
+            'Authorization': `Bearer ${SUPABASE_KEY}`,
+          },
+          body: JSON.stringify({
+            age:         values.age,
+            gender:      values.gender,
+            education:   values.education,
+            gaming_freq: values.gaming_freq,
+          }),
+        }
+      );
+
+      if (!res.ok) throw new Error((await res.text()) || `HTTP ${res.status}`);
+
+      // Redirect to game with session_id in URL
+      window.location.href = `${GAME_URL}?session_id=${sessionId}`;
+
+    } catch (err) {
+      console.error(err);
+      demoError.textContent = `Could not save responses: ${err.message}. Please try again.`;
+      demoError.classList.add('visible');
+      btnDemoSubmit.disabled = false;
+      btnDemoSubmit.innerHTML = 'Continue to Study <span>→</span>';
+    }
+  });
+
+  // ── Decline ───────────────────────────────────────────
+  btnNo.addEventListener('click', () => {
+    consentView.style.display = 'none';
+    declineView.style.display = 'block';
+  });
+
+  function showStatus(msg, isError) {
+    statusEl.textContent = msg;
+    statusEl.className   = 'status visible' + (isError ? ' error' : '');
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+{
+  "questions": [
+    {
+      "questionText": "What percentage of yearly plastic production ends up in the environment, and what is the equivalent tonnage?",
+      "options": [
+        "Approximately 25% of yearly plastic production ends up in the environment, equivalent to 80.5 million tons.",
+        "About 50% of yearly plastic production ends up in the environment, equivalent to 40 million tons.",
+        "Roughly 10% of yearly plastic production ends up in the environment, equivalent to 200 million tons.",
+        "Nearly 75% of yearly plastic production ends up in the environment, equivalent to 120 million tons."
+      ],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionText":"What is the potential future scenario for environmental plastic pollution if immediate action is not taken?",
+      "options": [
+        "If immediate action is not taken, environmental plastic pollution could double by 2040.",
+        "If immediate action is not taken, environmental plastic pollution could triple by 2040.",
+        "If immediate action is not taken, environmental plastic pollution will remain at the current levels until 2040.",
+        "If immediate action is not taken, environmental plastic pollution could quadruple by 2040."
+       ],
+       "correctAnswerIndex": 1
+    },
+    {
+      "questionText":"What is the main role of bees in the natural ecosystem?",
+      "options": [
+        "Bees perform a wide range of ecosystem services that enhance human well-being.",
+        "Bees transfer pollen between flowers to enable plants to reproduce.",
+        "Bees produce honey, a nutrient necessary for the survival of a large number of animal species.",
+        "Bees, only wild, support the basic life support systems of our planet."
+       ],
+       "correctAnswerIndex": 1
+    },
+    {
+      "questionText": "What are the main factors contributing to the decline of bee populations and how do they interact with each other?",
+      "options": [
+        "Bees are very resilient to change. Only potential exposure to harmful agricultural chemicals is contributing to population decline.",
+        "Habitat loss, pesticide use, pests, food shortages, climate change, and interspecies competition are factors contributing to the decline of bees.",
+        "The main reason for the decline of bees is the increase in organic crops. These types of crops do not use pesticides, which leads to the overpopulation of pests that harm bees.",
+        "The main cause of bee decline is the decrease in honey production. Due to the decreased demand for honey, beekeepers have reduced hive care, causing the decline of bees."
+      ],
+      "correctAnswerIndex": 1
+    },
+{
+  "questionText": "What are the consequences of incomplete degradation of surfactants in aquatic environments?",
+  "options": [
+    "Incomplete degradation of surfactants in aquatic environments leads to the formation of a viscous gel on the surfaces of aquatic plants, thereby aiding the growth of algae and invasive plants.",
+    "Incomplete degradation of surfactants in aquatic environments can lead to the formation of a protective barrier for some aquatic organisms, promoting the growth of harmful ecosystems.",
+    "Incomplete degradation of surfactants in aquatic environments can lead to extensive foaming in waterways, hindering the transfer of oxygen from air to water.",
+    "Incomplete degradation of surfactants in aquatic environments can be poisonous to some animals that feed on aquatic organisms, thereby decreasing biodiversity."
+  ],
+  "correctAnswerIndex": 2
+},
+{
+  "questionText": "What are the causes of detergent-related eutrophication?",
+  "options": [
+    "Eutrophication caused by detergents is due to the excessive presence of nitrogen in the water, which accelerates algae growth and reduces oxygen in the water.",
+    "Detergent-related eutrophication is mainly caused by the high presence of phosphates, which promote the rapid growth of algae and aquatic plants, reducing oxygen in the water during the decomposition process.",
+    "Detergents contribute to eutrophication due to the accumulation of plastic in water bodies, causing aquatic organisms to die. This results in a lack of sufficient nutrients to allow all aquatic species to survive.",
+    "Eutrophication is a positive side process that produces an increase in nutrients in the water, promoting too rapid growth of algae and other aquatic plants, a phenomenon known as algal blooms."
+  ],
+  "correctAnswerIndex": 1
+}
+  ]
+}
