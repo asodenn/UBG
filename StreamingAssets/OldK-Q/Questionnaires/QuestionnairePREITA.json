@@ -1,0 +1,84 @@
+{
+  "questions": [
+    {
+      "questionText": "Qual è la percentuale di produzione annuale di plastica che finisce nell'ambiente e quale è il tonnellaggio equivalente?",
+      "options": [
+        "Circa il 25% della produzione annuale di plastica finisce nell'ambiente, equivalente a 80,5 milioni di tonnellate.",
+        "Circa il 50% della produzione annuale di plastica finisce nell'ambiente, equivalente a 40 milioni di tonnellate.",
+        "Circa il 10% della produzione annuale di plastica finisce nell'ambiente, equivalente a 200 milioni di tonnellate.",
+        "Quasi il 75% della produzione annuale di plastica finisce nell'ambiente, equivalente a 120 milioni di tonnellate."
+      ],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionText": "Qual è lo scenario futuro potenziale per l'inquinamento ambientale da plastica se non si intraprendono azioni immediate?",
+      "options": [
+        "Se non si intraprendono azioni immediate, l'inquinamento ambientale da plastica potrebbe raddoppiare entro il 2040.",
+        "Se non si intraprendono azioni immediate, l'inquinamento ambientale da plastica potrebbe triplicare entro il 2040.",
+        "Se non si intraprendono azioni immediate, l'inquinamento ambientale da plastica rimarrà ai livelli attuali fino al 2040.",
+        "Se non si intraprendono azioni immediate, l'inquinamento ambientale da plastica potrebbe quadruplicare entro il 2040."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "questionText": "In che modo l'inquinamento da plastica è stato proposto come indicatore di un'era significativa?",
+      "options": [
+        "L'inquinamento da plastica è stato proposto come indicatore dell'era dell'Olocene.",
+        "L'inquinamento da plastica è stato proposto come indicatore dell'era del Cenozoico.",
+        "L'inquinamento da plastica è stato proposto come indicatore dell'era del Precambriano.",
+        "L'inquinamento da plastica è stato proposto come indicatore dell'era dell'Antropocene."
+      ],
+      "correctAnswerIndex": 3
+    },
+    {
+      "questionText": "Qual è il ruolo principale delle api nell'ecosistema naturale e come influenzano la riproduzione delle piante?",
+      "options": [
+        "Le api svolgono una vasta gamma di servizi ecosistemici che migliorano il benessere umano.",
+        "Le api producono il miele, un nutriente necessario per la sopravvivenza di numerose specie animali.",
+        "Le api sono impollinatori cruciali, trasferendo il polline tra i fiori per consentire alle piante di riprodursi.",
+        "Le api, e solo quelle selvatiche, supportano anche i sistemi di supporto di base del nostro pianeta."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "questionText": "Quali sono i principali fattori che contribuiscono al declino delle popolazioni di api e come interagiscono tra loro?",
+      "options": [
+        "Le api sono molto resistenti ai cambiamenti. Solamente l’esposizione potenziale a sostanze chimiche agricole dannose sta contribuendo al declino della popolazione.",
+        "La perdita di habitat, l'uso di pesticidi, parassiti, scarsità di cibo, cambiamenti climatici e competizione tra specie sono fattori che contribuiscono al declino delle api.",
+        "Il principale motivo del declino delle api è l'aumento delle coltivazioni biologiche. Questi tipi di coltivazioni non utilizzano pesticidi, il che porta alla sovrappopolazione di parassiti che danneggiano le api.",
+        "La principale causa del declino delle api è la diminuzione della produzione di miele. A causa della diminuzione della domanda di miele, gli apicoltori hanno ridotto la cura delle arnie, causando il declino delle api."
+      ],
+      "correctAnswerIndex": 1
+    },
+    {
+      "questionText": "Quali sono gli elementi essenziali dei detergenti?",
+      "options": [
+        "Gli elementi essenziali includono tensioattivi, candeggina, riempitivi, agenti schiumogeni, stabilizzatori, costituenti, profumi, agenti antisporco, enzimi e altri composti.",
+        "Gli elementi essenziali includono tensioattivi, profumi, candeggina, agenti schiumogeni, cloruro di sodio e altri composti.",
+        "Gli elementi essenziali dei detergenti includono tensioattivi, solventi, agenti addensanti e conservanti, poiché sono questi ingredienti che determinano l'efficacia di pulizia e la durata del detergente.",
+        "Gli elementi essenziali dei detergenti includono tensioattivi, emulsionanti, agenti chelanti e abrasivi, poiché sono questi ingredienti che determinano l'efficacia di pulizia su diverse superfici e in diverse condizioni."
+      ],
+      "correctAnswerIndex": 0
+    },
+    {
+      "questionText": "Quali sono le conseguenze della degradazione incompleta dei tensioattivi negli ambienti acquatici?",
+      "options": [
+        "La degradazione incompleta dei tensioattivi negli ambienti acquatici porta alla formazione di un gel viscoso sulle superfici delle piante acquatiche, aiutando così la crescita di alghe e piante invasive.",
+        "La degradazione incompleta dei tensioattivi negli ambienti acquatici può condurre alla formazione di una barriera protettiva per alcuni gli organismi acquatici, favorendo la crescita di ecosistemi nocivi.",
+        "La degradazione incompleta dei tensioattivi negli ambienti acquatici può portare alla formazione di schiuma estesa nei corsi d'acqua e nei fiumi in prossimità delle dighe, danneggiando gli ecosistemi e ostacolando il trasferimento dell'ossigeno dall'aria all'acqua.",
+        "La degradazione incompleta dei tensioattivi negli ambienti acquatici può risultare velenosa per alcuni animali che si nutrono di organismi acquatici, diminuendo così la biodiversità."
+      ],
+      "correctAnswerIndex": 2
+    },
+    {
+      "questionText": "Quali sono le cause dell'eutrofizzazione legata ai detergenti?",
+      "options": [
+        "L'eutrofizzazione causata dai detergenti è dovuta alla presenza eccessiva di azoto nell'acqua, che accelera la crescita delle alghe e riduce l'ossigeno nell'acqua.",
+        "L'eutrofizzazione legata ai detergenti è causata principalmente dalla presenza elevata di fosfati nei detergenti, che aumentano i livelli di nutrienti nell'acqua. Ciò favorisce la crescita rapida di alghe e piante acquatiche, riducendo l'ossigeno nell'acqua durante il processo di decomposizione.",
+        "I detergenti contribuiscono all'eutrofizzazione a causa dell'accumulo di plastica nei corpi idrici, causando la morte degli organismi acquatici.",
+        "L'eutrofizzazione è un processo collaterale positivo che produce unvaumento di nutrienti nell'acqua, favorendo la rapida crescita di alghe e altre piante acquatiche, un fenomeno noto come fioritura algale."
+      ],
+      "correctAnswerIndex": 1
+    }
+  ]
+}
